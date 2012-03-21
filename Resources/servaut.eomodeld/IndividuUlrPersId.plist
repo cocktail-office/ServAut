@@ -1,0 +1,58 @@
+{
+    attributes = (
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            precision = 8; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            definition = "nomUsuel||' '||prenom"; 
+            externalType = VARCHAR2; 
+            name = nomEtPrenom; 
+            valueClassName = NSString; 
+            width = 120; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NOM_PATRONYMIQUE"; 
+            externalType = VARCHAR2; 
+            name = nomPatronymique; 
+            valueClassName = NSString; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NOM_USUEL"; 
+            externalType = VARCHAR2; 
+            name = nomUsuel; 
+            valueClassName = NSString; 
+            width = 80; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = PRENOM; 
+            externalType = VARCHAR2; 
+            name = prenom; 
+            valueClassName = NSString; 
+            width = 30; 
+        }
+    ); 
+    attributesUsedForLocking = (noIndividu, persId, nomPatronymique, prenom, nomUsuel, nomEtPrenom); 
+    className = EOGenericRecord; 
+    classProperties = (persId, nomPatronymique, prenom, nomUsuel, noIndividu, nomEtPrenom); 
+    externalName = "GRHUM.INDIVIDU_ULR"; 
+    fetchSpecificationDictionary = {}; 
+    name = IndividuUlrPersId; 
+    primaryKeyAttributes = (persId); 
+}

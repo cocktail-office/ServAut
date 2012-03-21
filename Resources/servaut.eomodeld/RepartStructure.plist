@@ -1,0 +1,36 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            width = 10; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (persId, cStructure); 
+    className = EOGenericRecord; 
+    classProperties = (cStructure, persId, toStructureUlr); 
+    externalName = "GRHUM.REPART_STRUCTURE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (cStructure, persId, toStructureUlr); }; 
+    name = RepartStructure; 
+    primaryKeyAttributes = (persId, cStructure); 
+    relationships = (
+        {
+            destination = StructureUlr; 
+            internalInfo = {"_nameInObjectStore" = structureUlr; }; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = toStructureUlr; 
+        }
+    ); 
+}

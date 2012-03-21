@@ -1,0 +1,36 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            width = 10; 
+        }, 
+        {
+            columnName = "TGRP_CODE"; 
+            externalType = VARCHAR2; 
+            name = tgrpCode; 
+            valueClassName = NSString; 
+            width = 2; 
+        }
+    ); 
+    attributesUsedForLocking = (cStructure, tgrpCode); 
+    className = EOGenericRecord; 
+    classProperties = (cStructure, tgrpCode, toTypeGroupe); 
+    externalName = "GRHUM.REPART_TYPE_GROUPE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (cStructure, tgrpCode, toTypeGroupe); }; 
+    name = RepartTypeGroupe; 
+    primaryKeyAttributes = (cStructure, tgrpCode); 
+    relationships = (
+        {
+            destination = TypeGroupe; 
+            internalInfo = {"_nameInObjectStore" = typeGroupe; }; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = tgrpCode; sourceAttribute = tgrpCode; }); 
+            name = toTypeGroupe; 
+        }
+    ); 
+}

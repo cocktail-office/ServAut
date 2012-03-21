@@ -1,0 +1,44 @@
+{
+    attributes = (
+        {
+            columnName = "APPLI_ID"; 
+            externalType = NUMBER; 
+            name = appliId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "THEME_ID"; 
+            externalType = NUMBER; 
+            name = themeId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (themeId, appliId); 
+    className = EOGenericRecord; 
+    classProperties = (application, appliTheme); 
+    externalName = "REPART_THEME_APPLI"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (application, appliTheme); }; 
+    name = RepartThemeAppli; 
+    primaryKeyAttributes = (themeId, appliId); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleNoAction; 
+            destination = AppliTheme; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = themeId; sourceAttribute = themeId; }); 
+            name = appliTheme; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Application; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = appliId; sourceAttribute = appliId; }); 
+            name = application; 
+        }
+    ); 
+}

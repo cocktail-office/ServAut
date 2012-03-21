@@ -1,0 +1,212 @@
+{
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {
+        URL = "jdbc:oracle:thin:@localhost:1521:gest"; 
+        password = saut; 
+        username = saut; 
+    }; 
+    entities = (
+        {className = LRRecord; name = AppliID; }, 
+        {className = LRRecord; name = AppliPosition; }, 
+        {className = EOGenericRecord; name = AppliTheme; }, 
+        {className = LRRecord; name = AppliThemeID; }, 
+        {className = EOGenericRecord; name = Application; }, 
+        {className = EOGenericRecord; name = BdDico; }, 
+        {className = EOGenericRecord; name = Compte; }, 
+        {className = EOGenericRecord; name = DbVersion; }, 
+        {className = EOGenericRecord; name = GrhumParameters; }, 
+        {className = EOGenericRecord; name = IndividuUlr; }, 
+        {className = EOGenericRecord; name = IndividuUlrPersId; }, 
+        {className = EOGenericRecord; name = RepartCompte; }, 
+        {className = EOGenericRecord; name = RepartPersonneAdresse; }, 
+        {className = EOGenericRecord; name = RepartStructure; }, 
+        {className = EOGenericRecord; name = RepartThemeAppli; }, 
+        {className = EOGenericRecord; name = RepartTypeGroupe; }, 
+        {className = EOGenericRecord; name = StructureUlr; }, 
+        {className = LRRecord; name = ThemePosition; }, 
+        {className = EOGenericRecord; name = TypeGroupe; }, 
+        {className = EOGenericRecord; name = Vlans; }
+    ); 
+    userInfo = {
+        "_EntityModeler" = {
+            activeDatabaseConfigName = ManuDatabaseConfig; 
+            databaseConfigs = {
+                Default = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {
+                        URL = ""; 
+                        driver = ""; 
+                        jdbc2Info = {
+                            "ANSI92_CONFORMANCE" = ANSI92EntryLevel; 
+                            "DBMS_NAME" = Oracle; 
+                            "DRIVER_NAME" = "Oracle JDBC driver"; 
+                            "DRIVER_VER" = "9.2.0.1.0"; 
+                            "IDENTIFIER_QUOTE_STRING" = "\""; 
+                            "NON_NULLABLE_COLUMNS" = T; 
+                            "STRING_FUNCTIONS" = "ASCII,CHAR,CONCAT,LCASE,LENGTH,LTRIM,REPLACE,RTRIM,SOUNDEX,SUBSTRING,UCASE"; 
+                            typeInfo = {
+                                BLOB = {
+                                    createParams = 0; 
+                                    defaultJDBCType = (BLOB); 
+                                    isNullable = T; 
+                                    isSearchable = F; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 2147483647; 
+                                }; 
+                                CHAR = {
+                                    createParams = 1; 
+                                    defaultJDBCType = (CHAR); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 2000; 
+                                }; 
+                                CLOB = {
+                                    createParams = 0; 
+                                    defaultJDBCType = (CLOB); 
+                                    isNullable = T; 
+                                    isSearchable = F; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 2147483647; 
+                                }; 
+                                DATE = {
+                                    createParams = 0; 
+                                    defaultJDBCType = (DATE, TIME); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 7; 
+                                }; 
+                                FLOAT = {
+                                    createParams = 0; 
+                                    defaultJDBCType = (FLOAT); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 127; 
+                                    minScale = "-84"; 
+                                    precision = 63; 
+                                }; 
+                                INTERVALDS = {
+                                    createParams = 0; 
+                                    defaultJDBCType = ("-104"); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 4; 
+                                }; 
+                                INTERVALYM = {
+                                    createParams = 0; 
+                                    defaultJDBCType = ("-103"); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 5; 
+                                }; 
+                                LONG = {
+                                    createParams = 0; 
+                                    defaultJDBCType = ("LONG VARCHAR"); 
+                                    isNullable = T; 
+                                    isSearchable = F; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 2147483647; 
+                                }; 
+                                "LONG RAW" = {
+                                    createParams = 0; 
+                                    defaultJDBCType = ("LONG VARBINARY"); 
+                                    isNullable = T; 
+                                    isSearchable = F; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 2147483647; 
+                                }; 
+                                NUMBER = {
+                                    createParams = 2; 
+                                    defaultJDBCType = (BIT, TINYINT, BIGINT, NUMERIC, INTEGER, SMALLINT); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 127; 
+                                    minScale = "-84"; 
+                                    precision = 38; 
+                                }; 
+                                RAW = {
+                                    createParams = 1; 
+                                    defaultJDBCType = (VARBINARY); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 2000; 
+                                }; 
+                                REAL = {
+                                    createParams = 0; 
+                                    defaultJDBCType = (REAL); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 127; 
+                                    minScale = "-84"; 
+                                    precision = 63; 
+                                }; 
+                                TIMESTAMP = {
+                                    createParams = 0; 
+                                    defaultJDBCType = (TIMESTAMP); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 11; 
+                                }; 
+                                "TIMESTAMP WITH LOCAL TIME ZONE" = {
+                                    createParams = 0; 
+                                    defaultJDBCType = ("-102"); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 11; 
+                                }; 
+                                "TIMESTAMP WITH TIME ZONE" = {
+                                    createParams = 0; 
+                                    defaultJDBCType = ("-101"); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 13; 
+                                }; 
+                                VARCHAR2 = {
+                                    createParams = 1; 
+                                    defaultJDBCType = (VARCHAR); 
+                                    isNullable = T; 
+                                    isSearchable = T; 
+                                    maxScale = 0; 
+                                    minScale = 0; 
+                                    precision = 4000; 
+                                }; 
+                            }; 
+                        }; 
+                        password = ""; 
+                        plugin = ""; 
+                        username = ""; 
+                    }; 
+                }; 
+                ManuDatabaseConfig = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {
+                        URL = "jdbc:oracle:thin:@localhost:1521:gest"; 
+                        password = saut; 
+                        username = saut; 
+                    }; 
+                }; 
+            }; 
+        }; 
+        modelId = SAUT; 
+    }; 
+}

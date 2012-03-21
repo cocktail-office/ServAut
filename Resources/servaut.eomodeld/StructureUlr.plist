@@ -1,0 +1,135 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_STRUCTURE_PERE"; 
+            externalType = VARCHAR2; 
+            name = cStructurePere; 
+            valueClassName = NSString; 
+            width = 10; 
+        }, 
+        {
+            columnName = "C_TYPE_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cTypeStructure; 
+            valueClassName = NSString; 
+            width = 2; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GRP_ACCES"; 
+            externalType = VARCHAR2; 
+            name = grpAcces; 
+            valueClassName = NSString; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GRP_ALIAS"; 
+            externalType = VARCHAR2; 
+            name = grpAlias; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GRP_OWNER"; 
+            externalType = NUMBER; 
+            name = grpOwner; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GRP_RESPONSABLE"; 
+            externalType = NUMBER; 
+            name = grpResponsable; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LC_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = lcStructure; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LL_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = llStructure; 
+            valueClassName = NSString; 
+            width = 80; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        cStructure, 
+        persId, 
+        llStructure, 
+        lcStructure, 
+        cTypeStructure, 
+        cStructurePere, 
+        grpOwner, 
+        grpResponsable, 
+        grpAcces, 
+        grpAlias
+    ); 
+    className = EOGenericRecord; 
+    classProperties = (
+        persId, 
+        llStructure, 
+        lcStructure, 
+        cTypeStructure, 
+        cStructurePere, 
+        grpOwner, 
+        grpResponsable, 
+        grpAcces, 
+        grpAlias, 
+        cStructure, 
+        tosRepartTypeGroupe
+    ); 
+    externalName = "GRHUM.STRUCTURE_ULR"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            persId, 
+            llStructure, 
+            lcStructure, 
+            cTypeStructure, 
+            cStructurePere, 
+            grpOwner, 
+            grpResponsable, 
+            grpAcces, 
+            grpAlias, 
+            cStructure, 
+            tosRepartTypeGroupe
+        ); 
+    }; 
+    name = StructureUlr; 
+    primaryKeyAttributes = (cStructure); 
+    relationships = (
+        {
+            destination = RepartTypeGroupe; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = tosRepartTypeGroupe; 
+        }
+    ); 
+}

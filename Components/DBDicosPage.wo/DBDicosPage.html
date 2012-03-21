@@ -1,0 +1,94 @@
+<WEBOBJECT NAME=content>
+
+<WEBOBJECT NAME=ConditionalAjouter>
+<WEBOBJECT NAME=FormAjouter>
+<table cellpadding="1" cellspacing="0" border="0" width="100%" class="boxTitle">
+<tr><td>
+<font class="subTitleInverse"><b>&nbsp;La d&eacute;finition d'une connexion</b></font>
+</td></tr>
+<tr><td class="boxBorder">
+<table cellpadding="5" cellspacing="0" border="0" width="100%" class="boxContents">
+<tr><td align=left>
+  <table width=100% border=0>
+  <tr><td align="right" width=25% class="textEntry">
+    Code d'identification&nbsp;:
+  </td><td align="left">
+  <WEBOBJECT NAME=TextFieldId></WEBOBJECT></td></tr>
+  <tr><td align="right" class="textEntry">
+    Nom d'utilisateur&nbsp;:
+  </td><td align="left">
+  <WEBOBJECT NAME=TextFieldUserName></WEBOBJECT></td></tr>
+  <tr><td align="right" class="textEntry">
+    Mot de passe&nbsp;:
+  </td><td align="left">
+  <WEBOBJECT NAME=TextFieldPassword></WEBOBJECT>
+  </td></tr>
+  <tr><td align="right" class="textEntry">
+    Nom d'instance&nbsp;:
+  </td><td align="left">
+  <WEBOBJECT NAME=TextFieldServerId></WEBOBJECT>
+  </td></tr>
+  <tr><td align="right" class="textEntry">
+    URL de connexion&nbsp;:
+  </td><td align="left">
+  <WEBOBJECT NAME=TextFieldUrl></WEBOBJECT>
+  </td></tr>
+  <tr><td align="right" class="textEntry">
+    Libell&eacute;&nbsp;:
+  </td><td align="left">
+  <WEBOBJECT NAME=TextFieldLibelle></WEBOBJECT></td></tr>
+  </table>
+	<BR>&nbsp;&nbsp;&nbsp;<WEBOBJECT NAME=SubmitButtonValider></WEBOBJECT>&nbsp;&nbsp;&nbsp;<WEBOBJECT NAME=SubmitButtonAnnuler></WEBOBJECT>
+</td></tr></table>
+</td></tr></table>
+</WEBOBJECT>
+</WEBOBJECT>
+
+<WEBOBJECT NAME=FormListe>
+<table cellpadding="2" cellspacing="0" border="0" width="100%" class="boxTitle">
+<tr><td>
+<font class="subTitleInverse">&nbsp;La configuration d'acc&egrave;s &agrave; la base de
+donn&eacute;es</font>
+</td></tr></table>
+<WEBOBJECT NAME=ConditionalCacheAjouter>
+<P align="center">
+<WEBOBJECT NAME=SubmitButtonAjouter></WEBOBJECT>&nbsp;&nbsp;&nbsp;<WEBOBJECT NAME=SubmitButtonRafraichir></WEBOBJECT>
+</P>
+</WEBOBJECT>
+
+<p>
+<table width="100%" border=0 cellspacing=0 cellpadding=1 class="boxTitle">
+<tr><td>
+<table width="100%" border=0 cellspacing=1 cellpadding=2>
+<tr valign=top class="boxBorder">
+<td ALIGN=CENTER width=10% class="textEntry">Code ID</td>
+<td ALIGN=CENTER width=12% class="textEntry">Utilisateur</td>
+<td ALIGN=CENTER width=13% class="textEntry">Mot de passe</td>
+<td ALIGN=CENTER width=10% class="textEntry">Instance</td>
+<td ALIGN=CENTER width=25% class="textEntry">URL connexion</td>
+<td ALIGN=CENTER width=30% class="textEntry">Libell&eacute;</td>
+<WEBOBJECT NAME=ConditionalCacheAjouter>
+<td WIDTH=5% ALIGN=CENTER colspan=2><B>&nbsp;</B></td>
+</WEBOBJECT>
+</tr>
+
+<WEBOBJECT NAME=RepetitionListe>
+<tr valign="top" class="boxContents">
+<td ALIGN=CENTER><WEBOBJECT NAME=StringId></WEBOBJECT></td>
+<td ALIGN=CENTER><WEBOBJECT NAME=StringUtilisateur></WEBOBJECT></td>
+<td ALIGN=CENTER><WEBOBJECT NAME=StringPassword></WEBOBJECT></td>
+<td ALIGN=CENTER><WEBOBJECT NAME=StringInstance></WEBOBJECT></td>
+<td ALIGN=LEFT>&nbsp;<WEBOBJECT NAME=StringUrl></WEBOBJECT></td>
+<td ALIGN=LEFT>&nbsp;<WEBOBJECT NAME=StringLibelle></WEBOBJECT></td>
+<WEBOBJECT NAME=ConditionalCacheAjouter>
+<td width=3% align=center VALIGN=TOP><WEBOBJECT NAME=HyperlinkEdit><WEBOBJECT NAME=ImageEdit></WEBOBJECT></WEBOBJECT></td>
+<td width=3% align=center VALIGN=TOP><WEBOBJECT NAME=HyperlinkDelete><WEBOBJECT NAME=ImageDelete></WEBOBJECT></WEBOBJECT></td>
+</WEBOBJECT>
+</tr>
+</WEBOBJECT>
+</table>
+</td></tr></table>
+</p>
+</WEBOBJECT>
+
+</WEBOBJECT>

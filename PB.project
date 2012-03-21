@@ -1,0 +1,78 @@
+{
+    "DYNAMIC_CODE_GEN" = YES; 
+    FILESTABLE = {
+        CLASSES = (
+            "Sources/org/cocktail/servaut/serveur/Application.java", 
+            "Sources/org/cocktail/servaut/serveur/DirectAction.java", 
+            "Sources/org/cocktail/servaut/serveur/GenerateXMLZAP.java", 
+            "Sources/org/cocktail/servaut/serveur/Session.java", 
+            "Sources/org/cocktail/servaut/serveur/Version.java", 
+            "Sources/org/cocktail/servaut/serveur/VersionDatabase.java", 
+            "Sources/org/cocktail/servaut/serveur/VersionMe.java", 
+            "Sources/org/cocktail/servaut/serveur/authcore/AuthDB.java", 
+            "Sources/org/cocktail/servaut/serveur/authcore/AuthResponse.java", 
+            "Sources/org/cocktail/servaut/serveur/authcore/AuthUSR.java", 
+            "Sources/org/cocktail/servaut/serveur/components/AjoutApp.java", 
+            "Sources/org/cocktail/servaut/serveur/components/ContentPage.java", 
+            "Sources/org/cocktail/servaut/serveur/components/DADBDico.java", 
+            "Sources/org/cocktail/servaut/serveur/components/DADBDicoPage.java", 
+            "Sources/org/cocktail/servaut/serveur/components/DAPasswd.java", 
+            "Sources/org/cocktail/servaut/serveur/components/DAPasswdPage.java", 
+            "Sources/org/cocktail/servaut/serveur/components/DBDicosPage.java", 
+            "Sources/org/cocktail/servaut/serveur/components/Main.java", 
+            "Sources/org/cocktail/servaut/serveur/components/MainSet.java", 
+            "Sources/org/cocktail/servaut/serveur/components/Menu.java", 
+            "Sources/org/cocktail/servaut/serveur/components/Services.java"
+        ); 
+        FRAMEWORKS = (
+            CRIWebApp3, 
+            CRIWebExt3, 
+            JavaEOAccess, 
+            JavaEOControl, 
+            JavaFoundation, 
+            JavaJDBCAdaptor, 
+            JavaWOExtensions, 
+            JavaWebObjects, 
+            JavaXML
+        ); 
+        "OTHER_LINKED" = (); 
+        "OTHER_SOURCES" = (); 
+        SUBPROJECTS = ("AuthCore.subproj", "Components.subproj", "Resources.subproj"); 
+        "WOAPP_RESOURCES" = (
+            "Components/AjoutApp.api", 
+            "Components/ContentPage.api", 
+            "Components/DADBDicoPage.api", 
+            "Components/DAPasswdPage.api", 
+            "Components/DAPassword.api", 
+            "Components/DBDicosPage.api", 
+            "Components/Main.api", 
+            "Components/MainSet.api", 
+            "Components/Menu.api", 
+            "Components/Services.api", 
+            "Resources/Properties", 
+            "Resources/ServAut.config", 
+            "Resources/servaut.eomodeld"
+        ); 
+        "WO_COMPONENTS" = (); 
+    }; 
+    FRAMEWORKSEARCH = ("$(NEXT_ROOT)$(LOCAL_LIBRARY_DIR)/Frameworks"); 
+    LANGUAGE = English; 
+    "LOCALIZABLE_FILES" = {}; 
+    MAKEFILEDIR = "$(MAKEFILEPATH)/java_makefiles"; 
+    "NEXTSTEP_BUILDTOOL" = "/bin/gnumake"; 
+    "NEXTSTEP_INSTALLDIR" = "$(LOCAL_LIBRARY_DIR)/WebObjects/Applications"; 
+    "NEXTSTEP_JAVA_COMPILER" = "/usr/bin/javac"; 
+    "NEXTSTEP_OBJCPLUS_COMPILER" = "/usr/bin/cc"; 
+    PBPROJECTTYPEVERSION = "4.0"; 
+    "PDO_UNIX_BUILDTOOL" = "$NEXT_ROOT/Developer/bin/make"; 
+    "PDO_UNIX_INSTALLDIR" = "$(LOCAL_LIBRARY_DIR)/WebObjects/Applications"; 
+    "PDO_UNIX_JAVA_COMPILER" = "$(JDKBINDIR)/javac"; 
+    "PDO_UNIX_OBJCPLUS_COMPILER" = "$(NEXTDEV_BIN)/gcc"; 
+    PROJECTNAME = ServAut; 
+    PROJECTTYPE = JavaWebObjectsApplication; 
+    PROJECTVERSION = "2.8"; 
+    "WINDOWS_BUILDTOOL" = "$NEXT_ROOT/Developer/Executables/make"; 
+    "WINDOWS_INSTALLDIR" = "$(LOCAL_LIBRARY_DIR)/WebObjects/Applications"; 
+    "WINDOWS_JAVA_COMPILER" = "$(JDKBINDIR)/javac.exe"; 
+    "WINDOWS_OBJCPLUS_COMPILER" = "$(DEVDIR)/gcc"; 
+}

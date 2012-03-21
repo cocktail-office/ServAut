@@ -1,0 +1,43 @@
+{
+    attributes = (
+        {
+            columnName = "CPT_ORDRE"; 
+            externalType = NUMBER; 
+            name = cptOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (cptOrdre, persId); 
+    className = EOGenericRecord; 
+    classProperties = (toCompte, cptOrdre, persId, toIndividuUlr); 
+    externalName = "GRHUM.REPART_COMPTE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (toCompte, cptOrdre, persId, toIndividuUlr); }; 
+    name = RepartCompte; 
+    primaryKeyAttributes = (cptOrdre, persId); 
+    relationships = (
+        {
+            destination = Compte; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cptOrdre; sourceAttribute = cptOrdre; }); 
+            name = toCompte; 
+        }, 
+        {
+            destination = IndividuUlrPersId; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = toIndividuUlr; 
+        }
+    ); 
+}

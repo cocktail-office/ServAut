@@ -1,0 +1,55 @@
+{
+    attributes = (
+        {
+            columnName = "ADR_ORDRE"; 
+            externalType = NUMBER; 
+            name = adrOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "E_MAIL"; 
+            externalType = VARCHAR2; 
+            name = eMail; 
+            valueClassName = NSString; 
+            width = 120; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RPA_PRINCIPAL"; 
+            externalType = VARCHAR2; 
+            name = rpaPrincipal; 
+            valueClassName = NSString; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "RPA_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = rpaValide; 
+            valueClassName = NSString; 
+            width = 1; 
+        }, 
+        {
+            columnName = "TADR_CODE"; 
+            externalType = VARCHAR2; 
+            name = tadrCode; 
+            valueClassName = NSString; 
+            width = 5; 
+        }
+    ); 
+    attributesUsedForLocking = (persId, adrOrdre, eMail, rpaPrincipal, rpaValide, tadrCode); 
+    className = EOGenericRecord; 
+    classProperties = (persId, adrOrdre, eMail, rpaPrincipal, rpaValide, tadrCode); 
+    externalName = "GRHUM.REPART_PERSONNE_ADRESSE"; 
+    fetchSpecificationDictionary = {}; 
+    name = RepartPersonneAdresse; 
+    primaryKeyAttributes = (persId, adrOrdre, tadrCode); 
+}

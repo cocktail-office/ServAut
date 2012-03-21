@@ -1,0 +1,32 @@
+btValide: WOSubmitButton {
+	actionClass = "DAPasswd";
+	directActionName = "valider";
+	value = "Valider";
+}
+
+defaultPage: CRIDefaultPage {
+}
+
+footer: CRIHTMLFooter {
+	showBar = true;
+}
+
+formPasswd: WOForm {
+	actionClass = "DAPasswd";
+}
+
+note: CRINote {
+}
+
+siCrypte: WOConditional {
+	condition = hasCryptedPasswd;
+}
+
+strCryptedPass: WOString {
+	value = cryptedPasswd;
+}
+
+txtPasswd: WOTextField {
+	value = passwd;
+	name = "passwd";
+}

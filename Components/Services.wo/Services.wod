@@ -1,0 +1,15 @@
+CRIDefaultPage1: CRIDefaultPage {
+	pageTitle = "Services de l'application Demande de Travaux";
+}
+
+CRINote1: CRINote {
+	padding = "10";
+}
+
+servicesFooter: CRIHTMLFooter {
+	showBar = true;
+}
+
+strVersion: WOString {
+	value = version;
+}

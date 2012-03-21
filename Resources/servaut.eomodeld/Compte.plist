@@ -1,0 +1,96 @@
+{
+    attributes = (
+        {
+            columnName = "CPT_DOMAINE"; 
+            externalType = VARCHAR2; 
+            name = cptDomaine; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = "CPT_EMAIL"; 
+            externalType = VARCHAR2; 
+            name = cptEmail; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CPT_LOGIN"; 
+            externalType = VARCHAR2; 
+            name = cptLogin; 
+            valueClassName = NSString; 
+            width = 8; 
+        }, 
+        {
+            columnName = "CPT_ORDRE"; 
+            externalType = NUMBER; 
+            name = cptOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CPT_PASSWD"; 
+            externalType = VARCHAR2; 
+            name = cptPasswd; 
+            valueClassName = NSString; 
+            width = 15; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CPT_VLAN"; 
+            externalType = VARCHAR2; 
+            name = cptVlan; 
+            valueClassName = NSString; 
+            width = 15; 
+        }, 
+        {
+            allowsNull = Y; 
+            definition = "cptEmail||'@'||cptDomaine"; 
+            externalType = VARCHAR2; 
+            name = email; 
+            valueClassName = NSString; 
+            width = 80; 
+        }
+    ); 
+    attributesUsedForLocking = (cptOrdre, cptLogin, cptPasswd, cptEmail, cptDomaine, email); 
+    className = EOGenericRecord; 
+    classProperties = (
+        cptLogin, 
+        cptPasswd, 
+        cptEmail, 
+        cptDomaine, 
+        cptOrdre, 
+        email, 
+        cptVlan, 
+        tosRepartCompte
+    ); 
+    externalName = "GRHUM.COMPTE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            cptUidGid, 
+            cptLogin, 
+            cptPasswd, 
+            cptEmail, 
+            cptDomaine, 
+            cptOrdre, 
+            email, 
+            cptVlan, 
+            tosRepartCompte
+        ); 
+    }; 
+    name = Compte; 
+    primaryKeyAttributes = (cptOrdre); 
+    relationships = (
+        {
+            destination = RepartCompte; 
+            internalInfo = {"_nameInObjectStore" = repartCompte; }; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cptOrdre; sourceAttribute = cptOrdre; }); 
+            name = tosRepartCompte; 
+        }
+    ); 
+}

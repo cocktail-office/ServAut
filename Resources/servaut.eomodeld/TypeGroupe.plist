@@ -1,0 +1,26 @@
+{
+    attributes = (
+        {
+            columnName = "TGRP_CODE"; 
+            externalType = VARCHAR2; 
+            name = tgrpCode; 
+            valueClassName = NSString; 
+            width = 2; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TGRP_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = tgrpLibelle; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (tgrpCode, tgrpLibelle); 
+    className = EOGenericRecord; 
+    classProperties = (tgrpLibelle, tgrpCode); 
+    externalName = "GRHUM.TYPE_GROUPE"; 
+    fetchSpecificationDictionary = {}; 
+    name = TypeGroupe; 
+    primaryKeyAttributes = (tgrpCode); 
+}

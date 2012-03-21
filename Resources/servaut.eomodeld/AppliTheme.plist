@@ -1,0 +1,70 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "THEME_COMMENT"; 
+            externalType = VARCHAR2; 
+            name = themeComment; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 300; 
+        }, 
+        {
+            columnName = "THEME_ID"; 
+            externalType = NUMBER; 
+            name = themeId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "THEME_NAME"; 
+            externalType = VARCHAR2; 
+            name = themeName; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = "THEME_POSITION"; 
+            externalType = NUMBER; 
+            name = themePosition; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+            width = 10; 
+        }
+    ); 
+    attributesUsedForLocking = (themeId, themeName, themeComment, themePosition); 
+    className = EOGenericRecord; 
+    classProperties = (
+        themeName, 
+        themeComment, 
+        repartThemeApplis, 
+        themeId, 
+        application, 
+        themePosition
+    ); 
+    externalName = "APPLI_THEME"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (themeName, themeComment, repartThemeApplis, themeId, Attribute, themePosition); 
+    }; 
+    name = AppliTheme; 
+    primaryKeyAttributes = (themeId); 
+    relationships = (
+        {
+            definition = "repartThemeApplis.application"; 
+            deleteRule = EODeleteRuleDeny; 
+            internalInfo = {"_nameInObjectStore" = "repartThemeApplis_application"; }; 
+            joinSemantic = EOInnerJoin; 
+            name = application; 
+        }, 
+        {
+            deleteRule = EODeleteRuleDeny; 
+            destination = RepartThemeAppli; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = themeId; sourceAttribute = themeId; }); 
+            name = repartThemeApplis; 
+        }
+    ); 
+}

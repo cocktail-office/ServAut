@@ -1,0 +1,10 @@
+
+frameMenu: WOFrame {
+  name = "MenuAdmin";
+  value = pageMenu;
+}
+
+frameContenu: WOFrame {
+  value = criSession.contentPage;
+  name = "frameContenu";
+}

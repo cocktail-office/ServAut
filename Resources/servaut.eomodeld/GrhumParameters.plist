@@ -1,0 +1,39 @@
+{
+    attributes = (
+        {
+            columnName = "PARAM_COMMENTAIRES"; 
+            externalType = VARCHAR2; 
+            name = paramCommentaire; 
+            valueClassName = NSString; 
+            width = 500; 
+        }, 
+        {
+            columnName = "PARAM_KEY"; 
+            externalType = VARCHAR2; 
+            name = paramKey; 
+            valueClassName = NSString; 
+            width = 80; 
+        }, 
+        {
+            columnName = "PARAM_ORDRE"; 
+            externalType = NUMBER; 
+            name = paramOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "PARAM_VALUE"; 
+            externalType = VARCHAR2; 
+            name = paramValue; 
+            valueClassName = NSString; 
+            width = 180; 
+        }
+    ); 
+    attributesUsedForLocking = (paramCommentaire, paramValue, paramKey, paramOrdre); 
+    className = EOGenericRecord; 
+    classProperties = (paramOrdre, paramKey, paramValue, paramCommentaire); 
+    externalName = "GRHUM.GRHUM_PARAMETRES"; 
+    fetchSpecificationDictionary = {}; 
+    name = GrhumParameters; 
+    primaryKeyAttributes = (paramOrdre); 
+}

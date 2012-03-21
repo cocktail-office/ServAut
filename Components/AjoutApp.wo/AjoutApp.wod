@@ -1,0 +1,193 @@
+AppAuth: WOPopUpButton {
+	displayString = auth;
+	item = auth;
+	list = auths;
+	selection = appSelectedAuth;
+}
+
+AppBrowser: WOBrowser {
+	displayString = anAppli.appliLongName; // VALID
+	item = anAppli;
+	list = apps;
+	selections = appSelected;
+	onChange = "formApp.submit();";
+}
+
+AppComment: WOTextField {
+	value = appSelectedComment;
+	size = 50;
+}
+
+AppIcone: WOTextField {
+	value = appSelectedIcone;
+	size = 50;
+}
+
+AppLongName: WOTextField {
+	value = appSelectedLgName;
+	size = 50;
+}
+
+AppShortName: WOTextField {
+	value = appSelectedShName;
+	size = 50;
+}
+
+AppType: WOPopUpButton {
+	displayString = type;
+	item = type;
+	list = types;
+	selection = appSelectedType;
+}
+
+AppURL: WOTextField {
+	value = appSelectedURL;
+	size = 50;
+}
+
+Conditional1: WOConditional {
+	condition = thFormIncomplete;
+}
+
+Conditional2: WOConditional {
+	condition = appFormIncomplete;
+}
+
+ConditionalAjouter: WOConditional {
+	condition = isEditing;
+	negate = true;
+}
+
+ContentPage: ContentPage {
+}
+
+Delete: WOSubmitButton {
+	action = doAppSupprimer;
+	value = "Supprimer";
+	class = "bouton";
+}
+
+Modify: WOSubmitButton {
+	action = doAppValider;
+	value = "Valider";
+	class = "bouton";
+}
+
+SubmitButton1: WOSubmitButton {
+	action = resetAppField;
+	value = "Nouveau";
+	class = "bouton";
+}
+
+down: WOSubmitButton {
+	action = increaseAppPosition;
+	value = "DOWN";
+	class = "bouton";
+}
+
+formApp: WOForm {
+	action = doAppFormChangeSubmit;
+	multipleSubmit = true;
+	name = "formApp";
+}
+
+formTheme: WOForm {
+	multipleSubmit = true;
+	name = "formTheme";
+	action = doThFormChangeSubmit;
+}
+
+separateur: WOSubmitButton {
+	action = createSeparateur;
+	value = "Ajouter un s�parateur";
+	class = "bouton";
+}
+
+thAssociated: WOBrowser {
+	list = themes;
+	displayString = aTheme.themeName; // VALID
+	item = aTheme;
+	multiple = true;
+	selections = thAssociated;
+}
+
+thAssociated2: WOSubmitButton {
+	action = resetThField;
+	value = "Nouveau";
+	class = "bouton";
+}
+
+thBrowser: WOBrowser {
+	displayString = aTheme.themeName; // VALID
+	item = aTheme;
+	list = themes;
+	selections = thSelected;
+	onChange = "formTheme.submit();";
+}
+
+thComment1: WOTextField {
+	size = 50;
+	value = thSelectedComment;
+}
+
+thComment2: WOTextField {
+	size = 70;
+	value = thSelectedComment;
+}
+
+thDown: WOSubmitButton {
+	value = "DOWN";
+	action = increaseThPosition;
+	class = "bouton";
+}
+
+thModify: WOSubmitButton {
+	action = doThAjouter;
+	value = "Ajouter";
+}
+
+thModify2: WOSubmitButton {
+	value = "Modifier";
+	action = doThModifier;
+}
+
+thModify4: WOSubmitButton {
+	value = "Valider";
+	action = doThValider;
+	class = "bouton";
+}
+
+thName1: WOTextField {
+	size = 50;
+	value = thSelectedName;
+}
+
+thName2: WOTextField {
+	size = 50;
+	value = thSelectedName;
+}
+
+thUp: WOSubmitButton {
+	action = decreaseThPosition;
+	value = "UP";
+	class = "bouton";
+}
+
+up: WOSubmitButton {
+	action = decreaseAppPosition;
+	value = "UP";
+	class = "bouton";
+}
+
+valider: WOSubmitButton {
+	name = "Valider";
+	value = "Supprimer";
+	action = doThSupprimer;
+}
+
+valider2: WOSubmitButton {
+	name = "Valider";
+	value = "Supprimer";
+	action = doThSupprimer;
+	class = "bouton";
+}

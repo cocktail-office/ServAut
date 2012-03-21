@@ -1,0 +1,10 @@
+27/04/2006 hvillesu
+DirectAction.java : ajout de 3 méthodes proxyCallBackAction, getPTAction, getPT
+ServAut.config : ajout des paramètres CAS_SERVICE_URL et CAS_GT_TIMEOUT
+AjoutApp.java : correction bug tri des applis (nécessite un script SQL de cleanage)
+DADBDicoPage.wod, DBDicosPages.wod et servaut.eomodeld (BdDico.plist) : champ url JDBC passe de 100 à 500 (modif base aussi) 
+
+19/06/2006 hvillesu
+Application.java : pgtDico permet de stocker les paires pgtIou/pgt et 
+de les détruire lorsque que la période définie par le paramètre CAS_GT_TIMEOUT est ecoulée 
+DirectAction.java : on cas d'erreur lors de l'appel la DA getPT (méthode getPTAction()) on renvoi la chaine "null"

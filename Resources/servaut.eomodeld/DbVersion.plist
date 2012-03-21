@@ -1,0 +1,43 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "DB_COMMENT"; 
+            externalType = VARCHAR2; 
+            name = dbComment; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = "DB_DATE"; 
+            externalType = DATE; 
+            name = dbDate; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "DB_VER_NUM"; 
+            externalType = FLOAT; 
+            name = dbVerNum; 
+            precision = 126; 
+            valueClassName = NSNumber; 
+            valueType = f; 
+        }, 
+        {
+            columnName = "DB_VERSION"; 
+            externalType = VARCHAR2; 
+            name = dbVersion; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }
+    ); 
+    attributesUsedForLocking = (dbVerNum, dbVersion, dbDate, dbComment); 
+    className = EOGenericRecord; 
+    classProperties = (dbVerNum, dbVersion, dbDate, dbComment); 
+    externalName = "DB_VERSION"; 
+    fetchSpecificationDictionary = {}; 
+    name = DbVersion; 
+    primaryKeyAttributes = (dbVerNum); 
+}

@@ -1,0 +1,140 @@
+{
+    attributes = (
+        {
+            columnName = "APPLI_AUTH"; 
+            externalType = VARCHAR2; 
+            name = appliAuth; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "APPLI_COMMENT"; 
+            externalType = VARCHAR2; 
+            name = appliComment; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 300; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "APPLI_ICONE"; 
+            externalType = VARCHAR2; 
+            name = appliIcone; 
+            serverTimeZone = "Europe/Paris"; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 300; 
+        }, 
+        {
+            columnName = "APPLI_ID"; 
+            externalType = NUMBER; 
+            name = appliId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "APPLI_LONG_NAME"; 
+            externalType = VARCHAR2; 
+            name = appliLongName; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = "APPLI_POSITION"; 
+            externalType = NUMBER; 
+            name = appliPosition; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "APPLI_SHORT_NAME"; 
+            externalType = VARCHAR2; 
+            name = appliShortName; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            columnName = "APPLI_TYPE"; 
+            externalType = CHAR; 
+            name = appliType; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = "APPLI_URL"; 
+            externalType = VARCHAR2; 
+            name = appliUrl; 
+            serverTimeZone = "Europe/Paris"; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 300; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        appliId, 
+        appliLongName, 
+        appliShortName, 
+        appliIcone, 
+        appliUrl, 
+        appliAuth, 
+        appliComment, 
+        appliType, 
+        appliPosition
+    ); 
+    className = EOGenericRecord; 
+    classProperties = (
+        appliLongName, 
+        appliShortName, 
+        appliIcone, 
+        appliUrl, 
+        appliAuth, 
+        appliComment, 
+        appliType, 
+        repartThemeApplis, 
+        appliId, 
+        appliTheme, 
+        appliPosition
+    ); 
+    externalName = APPLICATION; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            appliLongName, 
+            appliShortName, 
+            appliIcone, 
+            appliUrl, 
+            appliAuth, 
+            appliComment, 
+            appliType, 
+            repartThemeApplis, 
+            appliId, 
+            Attribute, 
+            appliPosition
+        ); 
+    }; 
+    name = Application; 
+    primaryKeyAttributes = (appliId); 
+    relationships = (
+        {
+            definition = "repartThemeApplis.appliTheme"; 
+            internalInfo = {"_nameInObjectStore" = "repartThemeApplis_appliTheme"; }; 
+            joinSemantic = EOInnerJoin; 
+            name = appliTheme; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = RepartThemeAppli; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = appliId; sourceAttribute = appliId; }); 
+            name = repartThemeApplis; 
+        }
+    ); 
+}

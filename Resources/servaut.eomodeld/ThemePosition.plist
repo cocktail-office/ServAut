@@ -1,0 +1,21 @@
+{
+    attributes = (
+        {
+            columnName = "MAX_POSITION"; 
+            externalType = NUMBER; 
+            name = maxPosition; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (maxPosition); 
+    className = LRRecord; 
+    classProperties = (maxPosition); 
+    externalName = none; 
+    externalQuery = "SELECT MAX(THEME_POSITION) MAX_POSITION FROM APPLI_THEME"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (Attribute); }; 
+    isReadOnly = Y; 
+    name = ThemePosition; 
+    primaryKeyAttributes = (maxPosition); 
+}

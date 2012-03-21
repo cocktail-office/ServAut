@@ -1,0 +1,56 @@
+{
+    "WebObjects Release" = "WebObjects 5.0"; 
+    encoding = NSMacOSRomanStringEncoding; 
+    variables = {
+        appliDisplayGroup = {
+            class = WODisplayGroup; 
+            dataSource = {
+                class = EODatabaseDataSource; 
+                editingContext = criSession.defaultEditingContext; 
+                fetchSpecification = {
+                    class = EOFetchSpecification; 
+                    entityName = Application; 
+                    fetchLimit = 0; 
+                    isDeep = YES; 
+                }; 
+            }; 
+            fetchesOnLoad = YES; 
+            formatForLikeQualifier = "%@*"; 
+            localKeys = (); 
+            numberOfObjectsPerBatch = 0; 
+            selectsFirstObjectAfterFetch = YES; 
+            sortOrdering = (
+                {
+                    class = EOSortOrdering; 
+                    key = appliPosition; 
+                    selectorName = "compareAscending:"; 
+                }
+            ); 
+        }; 
+        appliThemeDisplayGroup = {
+            class = WODisplayGroup; 
+            dataSource = {
+                class = EODatabaseDataSource; 
+                editingContext = criSession.defaultEditingContext; 
+                fetchSpecification = {
+                    class = EOFetchSpecification; 
+                    entityName = AppliTheme; 
+                    fetchLimit = 0; 
+                    isDeep = YES; 
+                }; 
+            }; 
+            fetchesOnLoad = YES; 
+            formatForLikeQualifier = "%@*"; 
+            localKeys = (); 
+            numberOfObjectsPerBatch = 0; 
+            selectsFirstObjectAfterFetch = YES; 
+            sortOrdering = (
+                {
+                    class = EOSortOrdering; 
+                    key = themePosition; 
+                    selectorName = "compareAscending:"; 
+                }
+            ); 
+        }; 
+    }; 
+}

@@ -1,0 +1,82 @@
+<WEBOBJECT NAME=CRIDefaultPage1>
+
+<blockquote>
+<div align="center" class="mainTitle">
+	Les services de l'application ServAut</div>
+<div align="center" class="title">(version <WEBOBJECT NAME=strVersion></WEBOBJECT>)</div>
+</blockquote>
+
+<p class="boxTitle"><a name="da"><font class="titleInverse">&nbsp;Direct Actions</font></a></p>
+
+<center>
+<WEBOBJECT NAME=CRINote1>Le URL pour appeler une &quot;direct action&quot; d'une application est le suivant :<br>
+<table border=0>
+<tr><td width="12">&nbsp;</td>
+  <td class="textFixed">http://mon.serveur.com/cgi-bin/WebObjects/UneApplication.woa/wa/nomAction?parametre1=valeur1&amp;param2=val2&amp;...</td>
+</tr>
+</table>
+</WEBOBJECT>
+</center>
+
+<p class="listboxHeader"><font class="subTitle">&nbsp;Action&nbsp;: <i>Cryptage de dictionnaire de connexion</i></font></p>
+
+<p><i>Description&nbsp;:</i></p>
+<blockquote>Cette action affiche la page avec le formulaire permettant de d&eacute;finir et
+	de crypter un dictionnaire de connexion &agrave; une base de donn&eacute;es. La valeur
+	crypt&eacute;e g&eacute;n&eacute;r&eacute; peut &ecirc;tre mise dans le fichier de configuration
+	de l'application (param&egrave;tre <code>APP_DB_DIC</code>).</blockquote>
+
+<p><i>URL&nbsp;:</i></p>
+<blockquote><span class="textFixed">http://.../ServAut.woa/wa/DADBDico</span></blockquote>
+
+<p><i>Param&egrave;tres&nbsp;:</i></p>
+<blockquote>(Cette action ne prend aucun param&egrave;tre.)</blockquote>
+
+
+<p class="listboxHeader"><font class="subTitle">&nbsp;Action&nbsp;: <I>Cryptage de mot de
+passe</I><em> </em></font></p>
+
+<p><i>Description&nbsp;:</i></p>
+<blockquote>Cette action permet d'acc&eacute;der au formulaire de saisi et de cryptage des
+	mots de passe. La valeur obtenue peut &ecirc;tre utilis&eacute;e pour d&eacute;finir le mot de passe
+	d'acc&egrave;s &agrave; l'application. Voir le param&egrave;tre <code>APP_ADMIN_PASSWORD</code> dans la
+	configuration de l'application.</blockquote>
+
+<p><i>URL&nbsp;:</i></p>
+<blockquote><span class="textFixed">http://.../ServAut.woa/wa/DAPasswd</span></blockquote>
+
+<p><i>Param&egrave;tres&nbsp;:</i></p>
+<blockquote>(Cette action ne prend aucun param&egrave;tre.)</blockquote>
+
+<p class="listboxHeader"><font class="subTitle">&nbsp;Action : <I>XML&nbsp;pour ZAP</I><em>
+</em></font></p>
+
+<p><i>Description&nbsp;:</i></p>
+<blockquote>Cette action permet de g&eacute;n&eacute;rer et r&eacute;cup&eacute;rer un
+	document XML donnant la description des applications. La description obtenue peut &ecirc;tre
+	utilis&eacute;e pour initialiser l'application ZAP.<br>
+    <br>
+    Le contenu de XML est d&eacute;finit via l'interface fournie par l'application
+    <I>ServAut</I> (menu <I>ZAP</I>). L'URL d'acc&egrave;s &agrave; cette action peut &ecirc;tre
+    utilis&eacute;e pour initialiser le contenu de ZAP dynamiquement.</blockquote>
+
+<p><i>URL&nbsp;:</i></p>
+<blockquote><span class="textFixed">http://.../ServAut.woa/wa/getXMLZAP</span></blockquote>
+
+<p><i>Param&egrave;tres&nbsp;:</i></p>
+<blockquote>(Cette action ne prend aucun param&egrave;tre.)</blockquote>
+
+<p class="boxTitle"><a name="da"><font class="titleInverse">&nbsp;Services Web</font></a></p>
+
+<p>L'application d&eacute;finit deux actions &quot;db&quot; et &quot;usr&quot;
+	utilis&eacute;es pour r&eacute;cup&eacute;rer les dictionnaires de connexion et les
+	informations sur les utilisateurs. Ces actions utilisent le protocole SOAP et elles
+	&eacute;changent les informations crypt&eacute;es.</p>
+
+<p> Ces actions ne doivent pas &ecirc;tre acc&eacute;d&eacute;es directement. Les
+	m&eacute;thodes de la classe <code>SAUTCLient</code> (framework <i>CRIWebApp</i>) doivent &ecirc;tre utilis&eacute;es pour communiquer avec ces actions.
+</p>
+
+<p><WEBOBJECT NAME=servicesFooter></WEBOBJECT></p>
+
+</WEBOBJECT>

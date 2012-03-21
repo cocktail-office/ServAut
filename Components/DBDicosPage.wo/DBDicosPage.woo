@@ -1,0 +1,23 @@
+{
+    "WebObjects Release" = "WebObjects 5.0"; 
+    encoding = NSISOLatin1StringEncoding; 
+    variables = {
+        parametresSautBdDisplayGroup = {
+            class = WODisplayGroup; 
+            dataSource = {
+                class = EODatabaseDataSource; 
+                editingContext = "criSession.defaultEditingContext"; 
+                fetchSpecification = {
+                    class = EOFetchSpecification; 
+                    entityName = BdDico; 
+                    fetchLimit = 0; 
+                    isDeep = YES; 
+                }; 
+            }; 
+            formatForLikeQualifier = "%@*"; 
+            localKeys = (); 
+            numberOfObjectsPerBatch = 0; 
+            selectsFirstObjectAfterFetch = YES; 
+        }; 
+    }; 
+}

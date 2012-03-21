@@ -1,0 +1,69 @@
+<!-- *************************************************************** -->
+<!-- Ce fichier contient les commandes ANT utilisees pour la gestion -->
+<!-- des projets Eclipse                                             -->
+<!-- *************************************************************** -->
+
+<project name="LRAppTasks" default="about" basedir=".">
+	<description>
+	    Les commandes de gestion du projet DT
+	</description>
+
+  <property name="lr.trace.uncommented" value="LRLog.trace("/>
+  <property name="lr.trace.commented" value="// [LRAppTasks] : @LRLog.trace(@"/>
+  <property name="source.archive.name" value="ServAut-src.zip"/>
+ 
+  <target name="about">
+    <echo
+      message="Les commandes Ant utilisees pour la gestion des projets Eclipse."/>
+  </target>
+	
+	<!-- Commente tous les appels a LRLog.trace() -->
+  <target name="lrlogTrace.comment">
+		<replace dir=".">
+		  <include name="**/*.java"/>
+			<replacefilter 
+			    token="${lr.trace.uncommented}" 
+			    value="${lr.trace.commented}"/>
+		</replace>
+  </target>
+
+	<!-- Decommente tous les appels a LRLog.trace() -->
+  <target name="lrlogTrace.uncomment">
+		<replace dir=".">
+		  <include name="**/*.java"/>
+			<replacefilter 
+			    token="${lr.trace.commented}" 
+			    value="${lr.trace.uncommented}"/>
+		</replace>
+  </target>
+
+  <!--
+      Cree une archive avec les sources du projet Eclipse. Les informations
+      "CVS" n'y sont pas incluses.
+  --> 
+  <target name="build.eclipse.src" depends="clean"
+   description="Cree une archive du projet Eclipse">
+    <zip
+        destfile="${source.archive.name}"
+        basedir="./"
+        excludes="CVS/**, **/CVS/**"
+        whenempty="create"
+    />
+  </target> 
+
+  <!--
+      Supprime tous les binaires du projet eclipse.
+  --> 
+  <target name="clean"
+   description="Supprimes les codes binaires du projet eclipse.">
+    <delete includeemptydirs="true" failonerror="false">
+      <!-- <fileset dir="bin" includes="**/*"/> -->
+      <!-- <fileset dir="build" includes="**/*"/> -->
+      <fileset dir="bin"/> 
+      <fileset dir="build"/>
+      <fileset dir="dist"/>
+      <fileset file="${source.archive.name}"/>
+    </delete>
+  </target> 
+   
+</project>

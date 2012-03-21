@@ -1,0 +1,139 @@
+ConditionalAjouter: WOConditional {
+	condition = isEditing;
+}
+
+ConditionalCacheAjouter: WOConditional {
+	condition = isEditing;
+	negate = true;
+}
+
+FormAjouter: WOForm {
+    name = "formeAjouter";
+	multipleSubmit = true;
+}
+
+FormListe: WOForm {
+	multipleSubmit = true;
+    name = "formeListe";
+	// action = changerRechercheAvanceFaux;
+}
+
+HyperlinkDelete: WOHyperlink {
+	action = supprimer;
+	title = "Supprimer cette d�finition";
+}
+
+HyperlinkEdit: WOHyperlink {
+	action = modifier;
+	title = "Modifier cette d�finition";
+}
+
+ImageDelete: WOImage {
+	border = 0;
+	filename = "img/doc-delete.gif";
+	framework = "CRIWebExt3";
+  title = "Supprimer cette definition";
+}
+
+ImageEdit: WOImage {
+	border = 0;
+	filename = "img/doc-edit.gif";
+	framework = "CRIWebExt3";
+  title = "Modifier cette definition";
+}
+
+RepetitionListe: WORepetition {
+	item = parametresSautBdDisplayGroup.selectedObject;
+	list = parametresSautBdDisplayGroup.displayedObjects;
+}
+
+String2: WOString {
+	value = supprimer;
+}
+
+StringId: WOString {
+	value = parametresSautBdDisplayGroup.selectedObject.bdId; // VALID
+}
+
+StringInstance: WOString {
+	value = parametresSautBdDisplayGroup.selectedObject.bdInstance; // VALID
+}
+
+StringLibelle: WOString {
+	value = parametresSautBdDisplayGroup.selectedObject.bdLibelle; // VALID
+}
+
+StringPassword: WOString {
+	value = parametresSautBdDisplayGroup.selectedObject.bdPasse; // VALID
+}
+
+StringUrl: WOString {
+	value = parametresSautBdDisplayGroup.selectedObject.bdUrl; // VALID
+}
+
+StringUtilisateur: WOString {
+	value = parametresSautBdDisplayGroup.selectedObject.bdUtilisateur; // VALID
+}
+
+SubmitButtonAjouter: WOSubmitButton {
+	action = ajouter;
+	value = "Ajouter";
+  class = "bouton";
+}
+
+SubmitButtonAnnuler: WOSubmitButton {
+	action = annuler;
+	value = "Annuler";
+  class = "bouton";
+}
+
+SubmitButtonRafraichir: WOSubmitButton {
+	action = rafraichir;
+	value = "Rafraichir";
+  class = "bouton";
+}
+
+SubmitButtonValider: WOSubmitButton {
+	action = valider;
+	value = "Valider";
+  class = "bouton";
+}
+
+TextFieldId: WOTextField {
+	maxlength = 10;
+	size = 10;
+	value = bdId;
+}
+
+TextFieldLibelle: WOTextField {
+	maxlength = 80;
+	size = 45;
+	value = bdLibelle;
+}
+
+TextFieldPassword: WOTextField {
+	maxlength = 20;
+	size = 20;
+	value = bdMotDePasse;
+}
+
+TextFieldServerId: WOTextField {
+	maxlength = 20;
+	size = 20;
+	value = bdNomInstance;
+}
+
+TextFieldUrl: WOTextField {
+	value = bdUrl;
+	maxlength = 500;
+	size = 50;
+}
+
+TextFieldUserName: WOTextField {
+	maxlength = 20;
+	size = 20;
+	value = bdNomUtilisateur;
+}
+
+content: ContentPage {
+}

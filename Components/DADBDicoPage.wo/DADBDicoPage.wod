@@ -1,0 +1,56 @@
+btValide: WOSubmitButton {
+	actionClass = "DADBDico";
+	directActionName = "valider";
+	value = "Valider";
+}
+
+defaultPage: CRIDefaultPage {
+}
+
+footer: CRIHTMLFooter {
+	showBar = true;
+}
+
+formDico: WOForm {
+	actionClass = "DADBDico";
+}
+
+note: CRINote {
+}
+
+siCrypte: WOConditional {
+	condition = hasDico;
+}
+
+strDico: WOString {
+	value = dicoToHTML;
+	escapeHTML = false;
+}
+
+txtPasswd: WOTextField {
+	value = password;
+	name = "password";
+	maxlength = 20;
+	size = 15;
+}
+
+txtServerId: WOTextField {
+	maxlength = 20;
+	name = "serverId";
+	size = 15;
+	value = serverId;
+}
+
+txtURL: WOTextField {
+	maxlength = 500;
+	name = "url";
+	size = 35;
+	value = url;
+}
+
+txtUserName: WOTextField {
+	maxlength = 30;
+	name = "userName";
+	size = 15;
+	value = userName;
+}

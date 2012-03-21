@@ -1,0 +1,22 @@
+{
+    attributes = (
+        {
+            columnName = "MAX_ID"; 
+            externalType = NUMBER; 
+            internalInfo = {"_nameInObjectStore" = "THEME_ID"; }; 
+            name = maxId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (maxId); 
+    className = LRRecord; 
+    classProperties = (maxId); 
+    externalName = none; 
+    externalQuery = "SELECT MAX(THEME_ID) MAX_ID FROM APPLI_THEME"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (maxId); }; 
+    isReadOnly = Y; 
+    name = AppliThemeID; 
+    primaryKeyAttributes = (maxId); 
+}

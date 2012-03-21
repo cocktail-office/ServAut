@@ -1,0 +1,44 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "C_VLAN"; 
+            externalType = VARCHAR2; 
+            name = cVlan; 
+            valueClassName = NSString; 
+            width = 15; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LL_VLAN"; 
+            externalType = VARCHAR2; 
+            name = llVlan; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = PRIORITE; 
+            externalType = NUMBER; 
+            name = priorite; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (priorite, llVlan); 
+    className = EOGenericRecord; 
+    classProperties = (priorite, cVlan, tosRepartCompte, llVlan); 
+    externalName = "GRHUM.VLANS"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (priorite, cVlan, tosRepartCompte, llVlan); }; 
+    name = Vlans; 
+    primaryKeyAttributes = (priorite); 
+    relationships = (
+        {
+            destination = RepartCompte; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cptOrdre; sourceAttribute = priorite; }); 
+            name = tosRepartCompte; 
+        }
+    ); 
+}

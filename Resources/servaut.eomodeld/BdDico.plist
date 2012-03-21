@@ -1,0 +1,59 @@
+{
+    attributes = (
+        {
+            columnName = "BD_ID"; 
+            externalType = VARCHAR2; 
+            name = bdId; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "BD_INSTANCE"; 
+            externalType = VARCHAR2; 
+            name = bdInstance; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            columnName = "BD_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = bdLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            columnName = "BD_PASSE"; 
+            externalType = VARCHAR2; 
+            name = bdPasse; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            columnName = "BD_URL"; 
+            externalType = VARCHAR2; 
+            name = bdUrl; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 500; 
+        }, 
+        {
+            columnName = "BD_UTILISATEUR"; 
+            externalType = VARCHAR2; 
+            name = bdUtilisateur; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }
+    ); 
+    attributesUsedForLocking = (bdId, bdLibelle, bdUtilisateur, bdPasse, bdInstance, bdUrl); 
+    className = EOGenericRecord; 
+    classProperties = (bdLibelle, bdUtilisateur, bdPasse, bdInstance, bdUrl, bdId); 
+    externalName = "BD_DICO"; 
+    fetchSpecificationDictionary = {}; 
+    name = BdDico; 
+    primaryKeyAttributes = (bdId); 
+}

@@ -1,0 +1,23 @@
+content: WOComponentContent {
+}
+
+title: WOString {
+	escapeHTML = false;
+	value = criSession.contentTitle;
+}
+
+defaultPage: CRIDefaultPage {
+}
+
+footer: CRIHTMLFooter {
+	mailLabel = "Pour toute information contacter :<br>";
+	showBar = true;
+	useDefaultMail = true;
+}
+
+imgLigneJaune: WOImage {
+  border = "0";
+  width = "100%";
+  height = "6";
+  src = criApp.imageLigneSrc;
+}

@@ -1,0 +1,34 @@
+adminLogin: LRAdminLogin {
+	loginResponder = loginResponder;
+}
+
+defaultPage: CRIDefaultPage {
+	pageTitle = "SERVAUT";
+}
+
+imgClefs: WOImage {
+	src = criApp.imageClefsSrc;
+}
+
+imgLigneJaune: WOImage {
+  border = "0";
+  width = "100%";
+  height = "6";
+  src = criApp.imageLigneSrc;
+}
+
+imgLogo: WOImage {
+  border = "0";
+  alt = "Logo Universite";
+  src = criApp.mainLogoURL;
+}
+
+mailAdmin: CRIMailTo {
+	mail = criApp.contactMail;
+	mailLabel = "adressez-vous &agrave; l'administrateur en cliquant sur ce lien";
+}
+
+strCopyright: WOString {
+	escapeHTML = false;
+	value = criApp.copyright;
+}

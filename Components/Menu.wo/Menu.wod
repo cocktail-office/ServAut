@@ -1,0 +1,35 @@
+Body1: WOBody {
+  background = menuBackgroundImage;
+}
+
+HyperlinkExit: WOHyperlink {
+	action = criSession.logout;
+	target = "_top";
+	title = "Terminer la session de travail avec l'application";
+  class = "linkMenu";
+}
+
+HyperlinkULR: WOHyperlink {
+	action = criSession.goToApplicationSite;
+	target = "_top";
+	title = "Terminer la session de travail et revenir &agrave; la page d'accueil";
+  class="linkMenu";
+}
+
+ImageDot: WOImage {
+	border = 0;
+	filename = "img/dot.gif";
+	framework = "CRIWebExt3.framework";
+}
+
+WebMenu: CRIWebMenu {
+	listener = listener;
+	itemSet = menuItemSet;
+}
+
+imgLogo: WOImage {
+	border = 0;
+	height = 75;
+	src = criApp.mainLogoURL;
+	width = 75;
+}
